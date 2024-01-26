@@ -27,9 +27,8 @@ createApp({
                 this.getProducts()
             })
             .catch((err) => {
-                // location.href = './index.html';
+                location.href = './index.html';
                 alert(err.response.data.message);
-                console.log(err)
             })
         },
         getProducts(){
@@ -38,7 +37,7 @@ createApp({
                 this.products = res.data.products
             })
             .catch((err) => {
-                location.href = './index.html';
+                alert(err.response.data.message);
             })
         },
         openModal(status, item){
